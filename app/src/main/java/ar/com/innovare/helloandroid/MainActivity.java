@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         numero1 = (EditText) findViewById(R.id.numero1);
         numero2 = (EditText) this.findViewById(R.id.numero2);  //IGUAL
 
-        boton.setOnClickListener(new View.OnClickListener(){
+     /*   boton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
@@ -34,7 +34,17 @@ public class MainActivity extends AppCompatActivity {
                 Integer suma = num1+num2;
                 mensaje.setText("La suma es de " + suma.toString());
             }
-        });
+        });*/
+
+    }
+
+    private Integer sumar(int num1,int num2) {
+        return num1+num2;
+    }
+
+    public void clickSumar(View view) {
+        mensaje.setText("La suma es de " + this.sumar(Integer.parseInt(numero1.getText().toString()),
+                Integer.parseInt(numero2.getText().toString())));
 
     }
 }
